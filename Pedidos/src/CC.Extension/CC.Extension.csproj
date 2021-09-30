@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>$(SolutionName).CC.Extension</AssemblyName>
+    <Description>Extende as funcionalidades de Librarys e elementos nativos do Framework .Net</Description>
+    <Product>SenacRs.BusinessUnits</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include=".Net\Exception.cs" />
+    <Compile Include=".Net\HttpClient.cs" />
+    <Compile Include=".Net\Object.cs" />
+    <Compile Include=".Net\Uri.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

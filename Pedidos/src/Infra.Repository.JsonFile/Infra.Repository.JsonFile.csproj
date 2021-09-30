@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>$(SolutionName).Infra.Repository.JsonFile</AssemblyName>
+    <Product>SenacRs.BusinessUnits</Product>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>  <ItemGroup>
+    <ProjectReference Include="..\Infra.Repository.Shared\Infra.Repository.Shared.csproj" />
+  </ItemGroup>  
+</Project>
