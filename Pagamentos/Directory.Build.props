@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>$(SolutionDir)\trash\$(MSBuildProjectName)\$(PlatformShortName)\$(Configuration)\</BaseIntermediateOutputPath>
+	<OutputPath Condition="'$(OutputPath)'=='' ">$(SolutionDir)\build\$(MSBuildProjectName)\$(PlatformShortName)\$(Configuration)\</OutputPath>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	
+	<Company>Gigamar Soluções Digitais LTDA</Company>
+    <Copyright>Gigamar Soluções Digitais LTDA</Copyright>
+    <Product>Capacitacao.MS</Product>
+    <Authors>Marcelo Dalpiaz</Authors>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <InformationalVersion>$(SourceRevisionId)</InformationalVersion>
+	<Platforms>AnyCPU;x86;x64</Platforms>
+  </PropertyGroup>
+</Project>

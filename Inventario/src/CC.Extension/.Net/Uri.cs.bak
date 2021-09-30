@@ -1,0 +1,88 @@
+﻿using System;
+using System.ComponentModel;
+using System.Web;
+
+namespace Extension.Net
+{
+    public static class UriExtension
+    {
+
+        /// <summary>
+        /// Adiciona parametros na URL
+        /// </summary>
+        /// <param name="uri"></param>
+        /// <param name="name"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static System.Uri AddParameter(this System.Uri uri, string name, string value)
+        {
+            #region [ Code ]
+            var ub = new UriBuilder(uri);
+
+            var httpValueCollection = HttpUtility.ParseQueryString(uri.Query);
+
+            httpValueCollection.Add(name, value);
+
+            ub.Query = httpValueCollection.ToString();
+
+            return ub.Uri;
+            #endregion
+        }
+
+        /// <summary>
+        /// Adiciona a Uri uma nova rota no final /route
+        /// </summary>
+        /// <param name="uri"></param>
+        /// <param name="route"></param>
+        /// <returns></returns>
+        public static System.Uri AddRoute(this System.Uri uri, string route)
+        {
+            #region [ Code ]
+            var ub = new UriBuilder(uri);
+
+            ub.Path += route[0] == '/' ? route : $"/{route}";
+
+            return ub.Uri;
+            #endregion
+        }
+
+        /// <summary>
+        /// Procura palavras na rota e substitui as mesmas
+        /// </summary>
+        /// <param name="uri"></param>
+        /// <param name="find"></param>
+        /// <param name="replace"></param>
+        /// <returns></returns>
+        public static System.Uri ReplaceRoute(this System.Uri uri, string find, string replace)
+        {
+            #region [ Code ]
+            var ub = new UriBuilder(uri);
+
+            ub.Path = ub.Path.Replace(find, replace);
+
+            return ub.Uri;
+            #endregion
+        }
+
+
+        public static System.Uri ReflectionParameter<TParameter>(this System.Uri uri, TParameter parameter )
+        {
+            #region [ Code ]
+
+            var ub = new UriBuilder(uri);
+
+            foreach (PropertyDescriptor prop in TypeDescriptor.GetProperties(parameter))
+            {
+                var value = prop.GetValue(parameter);
+
+                if (value != null)
+                    uri = uri.ReplaceRoute("{" + prop.Name.ToUpper() + "}", value.ToString());
+            }
+
+            return ub.Uri;
+
+            #endregion
+        }
+
+    }
+}

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>$(SolutionName).App.Shared</AssemblyName>
+    <Product>SenacRs.BusinessUnits</Product>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="FluentValidation" Version="8.6.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Shared\Core.Shared.csproj" />
+    <ProjectReference Include="..\Infra.Repository.Shared\Infra.Repository.Shared.csproj" />
+  </ItemGroup>
+</Project>

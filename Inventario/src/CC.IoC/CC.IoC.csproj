@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>$(SolutionName).CC.IoC</AssemblyName>
+    <Description>Realiza a inversão de Controle da Aplicação e mantem o baixo acoplamento das aplicações</Description>
+    <Product>SenacRs.BusinessUnits</Product>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.1" />
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <ProjectReference Include="..\App.Shared\App.Shared.csproj" />
+    <ProjectReference Include="..\Core.Shared\Core.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
