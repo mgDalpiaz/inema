@@ -17,7 +17,7 @@ namespace Front.API.Controllers
         #region [ Ctor ]
 
         public PedidoController(
-            IPedidoServices service,
+            ICatalogoServices service,
             INotificationHandler<Notification> notification)
             : base(notification)
         {

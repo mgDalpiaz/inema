@@ -1,0 +1,18 @@
+﻿{
+  "AppInfo": {
+    "Version": "1.0",
+    "Title": "",
+    "Description": "",
+    "TermsOfService": "",
+    "Contact": {
+      "Name": "SenacRS",
+      "Url": "https://www.senacrs.com.br",
+      "Email": "grupodesenvolvimento@senacrs.com.br"
+    },
+    "License": {
+      "Name": "MIT",
+      "Url": "https://opensource.org/licenses/MIT"
+    }
+  }
+}
+

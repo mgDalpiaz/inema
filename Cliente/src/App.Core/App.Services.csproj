@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>$(SolutionName).App.Services</AssemblyName>
+    <Authors>Marcelo Dalpiaz</Authors>
+    <Company>SenacRS</Company>
+    <Copyright>SenacRS LTDA</Copyright>
+    <Product>SenacRs.BusinessUnits</Product>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <InformationalVersion>$(SourceRevisionId)</InformationalVersion>
+    <Platforms>AnyCPU;x86;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="MediatR" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="7.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.Shared\App.Shared.csproj" />
+    <ProjectReference Include="..\CC.IoC\CC.IoC.csproj" />
+    <ProjectReference Include="..\Core.BC.Domain\Core.BC.Domain.csproj" />
+    <ProjectReference Include="..\Infra.Repository.JsonFile\Infra.Repository.JsonFile.csproj" />
+    <ProjectReference Include="..\Infra.Repository.Shared\Infra.Repository.Shared.csproj" />
+    <ProjectReference Include="..\Infra.Repository.SqlServer.Core\Infra.Repository.SqlServer.Core.csproj">
+      <Private>true</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Infra.Repository.SqlServer\Infra.Repository.SqlServer.csproj" />
+   </ItemGroup>
+</Project>
