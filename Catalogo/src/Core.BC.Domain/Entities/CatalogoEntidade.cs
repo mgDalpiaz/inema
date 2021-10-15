@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Core.Shared.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Core.BC.Domain.Entities
 {
-    public class CatalogoEntidade
+    public class CatalogoEntidade : BaseEntity
     {
         #region [ Properties ]
 
@@ -16,9 +17,9 @@ namespace Core.BC.Domain.Entities
 
         public DateTime Termino { get; set; }
 
-        public IEnumerable<ListaPrecoEntidade> ListaPreco { get; set; }
+        public virtual IEnumerable<ListaPrecoEntidade> ListaPreco { get; set; }
 
-        public IEnumerable<ProdutoModel> Produtos { get; set; }
+        public virtual IEnumerable<ProdutoModel> Produtos { get; set; }
 
         #endregion
 

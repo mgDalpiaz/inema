@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Product>SenacRs.BusinessUnits</Product>
+    <Product>Catalogo</Product>
   </PropertyGroup>
 
   <ItemGroup>

@@ -6,7 +6,7 @@
     <Authors>Marcelo Dalpiaz</Authors>
     <Company>SenacRS</Company>
     <Copyright>SenacRS LTDA</Copyright>
-    <Product>SenacRs.BusinessUnits</Product>
+    <Product>Catalogo</Product>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <InformationalVersion>$(SourceRevisionId)</InformationalVersion>
     <Platforms>AnyCPU;x86;x64</Platforms>

@@ -2,9 +2,6 @@
 using CC.Extension.Net;
 using Core.Shared;
 using Core.Shared.Messages;
-using Infra.External.API;
-using Infra.Repository.JsonFile;
-using Infra.Repository.JsonFile.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -80,11 +77,7 @@ namespace CC.IoC.BootStrapper
 
             // ASP.NET HttpContext dependency
             GetServices().AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-                        
-            //External API
-            GetServices().AddScoped<IJsonFileRepository, JsonFileRepository>();
-            GetServices().AddHttpClient<IExternalAPI, ExternalAPI>();
-
+                                    
             // Domain Bus (Mediator)
             services.AddScoped<IDomainEventBus, DomainEvent>();
 

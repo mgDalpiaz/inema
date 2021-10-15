@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>$(SolutionName).CC.Warmup</AssemblyName>
     <Description>Gerencia o warmup basico de todas as aplicações .Net, também faz o Bootstrap da Solution e gerencia os Envirements</Description>
-    <Product>SenacRs.BusinessUnits</Product>    
+    <Product>Catalogo</Product>    
   </PropertyGroup>
 
   <ItemGroup>

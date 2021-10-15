@@ -7,7 +7,7 @@ namespace Core.BC.Domain.Entities
     public class ProdutoModel : BaseEntity
     {
         #region [ Propriedades ]
-
+               
         public string NomeProduto { get; set; }
 
         public bool Perecivel { get; set; }
@@ -20,7 +20,7 @@ namespace Core.BC.Domain.Entities
 
         public string CodigoLote { get; set; }
 
-        public IEnumerable<ProdutoVariacoesEntidade> Variacoes { get; set; }
+        public virtual IEnumerable<ProdutoVariacoesEntidade> Variacoes { get; set; }
 
         #endregion
 

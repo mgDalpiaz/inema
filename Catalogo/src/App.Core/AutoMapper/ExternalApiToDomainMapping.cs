@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Core.BC.Domain;
-using Infra.External.API.BusinessUnits;
 using System;
 using System.Collections.Generic;
 using System.Text;

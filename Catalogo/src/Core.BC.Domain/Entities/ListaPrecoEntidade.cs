@@ -1,11 +1,11 @@
-﻿using Extension.Collections;
+﻿using Core.Shared.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Core.BC.Domain.Entities
 {
-    public class ListaPrecoEntidade
+    public class ListaPrecoEntidade : BaseEntity
     {
 
         #region [ Properties ]
@@ -14,7 +14,7 @@ namespace Core.BC.Domain.Entities
 
         public DateTime Termino { get; set; }
 
-        public IList<ProdutoListaPrecoModel> ProdutoValor { get; set; }
+        public virtual IList<ProdutoListaPrecoModel> ProdutoValor { get; set; }
 
         public decimal DescontoPercentual { get; set; }
 

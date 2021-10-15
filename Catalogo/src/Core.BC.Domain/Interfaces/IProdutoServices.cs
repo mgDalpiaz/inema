@@ -1,5 +1,6 @@
 ﻿using Core.BC.Domain.Entities;
 using Core.Shared;
+using Core.Shared.Messages;
 using System;
 using System.Collections.Generic;
 
@@ -8,15 +9,15 @@ namespace Core.BC.Domain.Interfaces
     public interface IProdutoServices
     {
 
-        ProdutoModel Cadastrar(ProdutoModel produtoModel);
-        
-        ProdutoModel Atualizar(ProdutoModel produtoModel);
-        
-        ProdutoModel Inativar(ProdutoModel produtoModel);
-        
-        ProdutoModel Ativar(ProdutoModel produtoModel);
+        ResponseMessage<ProdutoModel> Cadastrar(ProdutoModel produtoModel);
 
-        IList<ProdutoModel> ObterProdutos(Guid? id);
+        ResponseMessage<ProdutoModel> Atualizar(ProdutoModel produtoModel);
+        
+        ResponseMessage<ProdutoModel> Inativar(ProdutoModel produtoModel);
+        
+        ResponseMessage<ProdutoModel> Ativar(ProdutoModel produtoModel);
+
+        ResponseMessage<IList<ProdutoModel>> ObterProdutos(Guid? id);
 
 
 

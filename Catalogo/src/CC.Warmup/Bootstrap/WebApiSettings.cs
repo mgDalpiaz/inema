@@ -102,7 +102,7 @@ namespace CC.Warmup
              .UseAuthentication()
              .UseAuthorization()
              //.UseMiddleware(typeof(AuthorizeHandlingMiddleware))
-             .UseMiddleware(typeof(ErrorHandlingMiddleware))
+             //.UseMiddleware(typeof(ErrorHandlingMiddleware))
              .UseEndpoints(endpoints =>
              {
                  endpoints.MapControllers();

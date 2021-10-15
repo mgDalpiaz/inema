@@ -1,5 +1,4 @@
-﻿using Infra.Repository.SqlServer.Core.Mappings;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 namespace Infra.Repository.SqlServer.Core
